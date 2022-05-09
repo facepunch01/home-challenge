@@ -5,7 +5,7 @@ class MyElement extends LitElement {
     img: {},
     link: {},
     name: {},
-    cta: {},
+    description: {},
   };
   static styles = css`
     .body-top {
@@ -38,7 +38,6 @@ class MyElement extends LitElement {
       border: 2px solid black;
       background-color: white;
       color: black;
-      min-width: 110.295px;
       padding: 1rem 1rem;
       font-size: 16px;
       cursor: pointer;
@@ -67,7 +66,6 @@ class MyElement extends LitElement {
     super();
     this.img = "/src/tiktok.svg"
     this.name = 'Insert';
-    this.cta = 'Go now!';
   }
 
   render() {
@@ -76,7 +74,7 @@ class MyElement extends LitElement {
       <div class="container">
         <img class="image" src="${this.img}">
         <h1>${this.name}</h1>
-        <button class="button" onclick="location.href='${this.link}'">${this.cta}</button>
+        <button class="button" onclick="location.href='${this.link}'">Follow me!</button>
       </div>
     </div>
     `;
