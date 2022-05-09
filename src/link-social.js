@@ -38,7 +38,6 @@ class MyElement extends LitElement {
       border: 2px solid black;
       background-color: white;
       color: black;
-      min-width: 110.295px;
       padding: 1rem 1rem;
       font-size: 16px;
       cursor: pointer;
