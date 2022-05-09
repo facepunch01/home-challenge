@@ -3,17 +3,19 @@ import WindiCSS from 'vite-plugin-windicss'
 
 
 // https://vitejs.dev/config/
-export default defineConfig({
-  build: {
-    lib: {
-      entry: 'src/my-element.js',
-      formats: ['es']
+export default defineConfig(({ command, mode }) => {
+  return {
+    build: {
+      lib: {
+        entry: "index.html",
+        formats: ["es"],
+      },
+      rollupOptions: {
+        external: mode === "production" ? "" : /^lit-element/,
+      },
     },
-    rollupOptions: {
-      external: /^lit/
-    }
-  },
-  plugins: [
-    WindiCSS(),
-  ]
-})
+    plugins: [
+      WindiCSS(),
+    ],
+  };
+});
