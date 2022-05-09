@@ -11,7 +11,7 @@ export default defineConfig(({ command, mode }) => {
         formats: ["es"],
       },
       rollupOptions: {
-        external: mode === "production" ? "" : /^lit-element/,
+        external: mode === "production" ? "" : /^lit/,
       },
     },
     plugins: [
