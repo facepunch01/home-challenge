@@ -13,7 +13,6 @@ class MyElement extends LitElement {
       width: 75vw;
     }
     .container {
-      position: absolute;
       max-width: 75vw;
       display: flex;
       background: #f2f2f2;
@@ -45,6 +44,13 @@ class MyElement extends LitElement {
       align-self: center;
       border-radius: 15px;
       margin-left: auto;
+      transform: perspective(1px) translateZ(0);
+      box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+      transition-duration: 0.3s;
+      transition-property: transform;
+    }
+    .button:hover, .button:focus, .button:active {
+      transform: scale(0.9);
     }
     @media screen and (max-width: 500px) {
       .container {
